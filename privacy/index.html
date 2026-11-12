@@ -39,13 +39,13 @@
 <div class="wrap">
 
   <h1>Frame プライバシーポリシー</h1>
-  <p class="updated">最終更新日: 2026年10月26日</p>
+  <p class="updated">最終更新日: 2026年11月12日</p>
 
   <p class="lead">Frame（以下「本アプリ」）は、iPad を常設ダッシュボードとして使うためのアプリです。本ポリシーは、本アプリが扱う情報とその取り扱いについて説明します。本アプリは分析目的のデータ収集や広告を一切行わず、ユーザーを追跡しません。</p>
 
   <h2>取得・利用する情報</h2>
   <ul>
-    <li><strong>位置情報</strong>：天気ウィジェットを購入し有効にした場合にのみ使用します。現在地の緯度・経度を天気予報サービス <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> に送信し、天気情報を取得します。位置情報は本アプリの提供者のサーバーに送信・保存されず、個人を特定する情報と紐付けられず、トラッキングにも使用されません。iOS の「設定」からいつでも許可を取り消せます。</li>
+    <li><strong>位置情報</strong>：設定で天気を ON にした場合にのみ使用します。現在地の緯度・経度（約 1km の精度）を Apple の WeatherKit に送信して天気情報を取得し、Apple の地図サービス（MapKit）に送信して地点名を取得します（バージョン 1.4 以前は天気予報サービス <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> に送信していました）。位置情報は本アプリの提供者のサーバーに送信・保存されず、個人を特定する情報と紐付けられず、トラッキングにも使用されません。iOS の「設定」からいつでも許可を取り消せます。</li>
     <li><strong>写真</strong>：スライドショー表示のために、iOS の写真ライブラリ（PhotoKit）へアクセスします。写真は端末内でのみ処理・表示され、外部に送信・アップロードされることは一切ありません。</li>
     <li><strong>アプリ内設定</strong>：時計スタイルや表示設定などは、端末内（<code>UserDefaults</code>）にのみ保存されます。</li>
     <li><strong>問い合わせ</strong>：設定の「問い合わせ」から送信した場合にのみ、入力されたメッセージ、返信先のメールアドレス（任意）、アプリのバージョン、iPadOS のバージョン、端末の機種を、本アプリの提供者が運用する中継サーバー（Cloudflare Workers）を経由して、提供者の Slack ワークスペースへ送ります。送信前に送る内容をすべて画面に表示します。中継サーバーは内容を保存せず、記録にも残しません。IP アドレスは、短時間に大量の送信がされないよう制限するためにのみ Cloudflare が一時的に使用します。</li>
@@ -57,8 +57,8 @@
 
   <h2>第三者への提供</h2>
   <ul>
-    <li><strong>Open-Meteo</strong>：天気取得のため、緯度・経度のみを送信します（同社のプライバシー方針は同社サイトをご確認ください）。</li>
-    <li><strong>Apple</strong>：アプリ内課金（天気ウィジェット）の決済は Apple の App Store を通じて処理されます。本アプリの提供者はお客様の決済情報を受け取りません。</li>
+    <li><strong>Apple</strong>：天気と地点名の取得のため、緯度・経度のみを WeatherKit と MapKit に送信します（<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple のプライバシーポリシー</a>）。バージョン 1.4 以前のアプリ内課金（天気ウィジェット）の決済は Apple の App Store を通じて処理されており、本アプリの提供者はお客様の決済情報を受け取りません。</li>
+    <li><strong>Open-Meteo</strong>：バージョン 1.4 以前のみ、天気取得のため緯度・経度を送信します（同社のプライバシー方針は同社サイトをご確認ください）。</li>
     <li><strong>Google（Firebase Crashlytics）</strong>：クラッシュレポートの収集と保管に使用します（<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Firebase のプライバシーと情報保護</a>）。</li>
     <li><strong>Cloudflare</strong>：問い合わせの中継サーバーの運用に使用します。</li>
     <li><strong>Slack</strong>：問い合わせの受け取りと保管に使用します。</li>
@@ -80,14 +80,14 @@
   <hr>
 
   <h1>Frame Privacy Policy</h1>
-  <p class="updated">Last updated: October 26, 2026</p>
+  <p class="updated">Last updated: November 12, 2026</p>
 
   <div class="lang-en">
   <p class="lead">Frame (the “App”) is an always-on dashboard app for iPad. This policy explains what information the App handles and how. The App performs no analytics collection or advertising and does not track users.</p>
 
   <h2>Information We Access and Use</h2>
   <ul>
-    <li><strong>Location</strong>: Used only when the Weather widget is purchased and enabled. Your current latitude and longitude are sent to the weather service <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> to retrieve weather data. Location is not sent to or stored on the developer’s servers, is not linked to your identity, and is not used for tracking. You can revoke the permission anytime in iOS Settings.</li>
+    <li><strong>Location</strong>: Used only when Weather is turned on in Settings. Your current latitude and longitude (to about 1 km) are sent to Apple’s WeatherKit to retrieve weather data and to Apple’s map service (MapKit) to look up the place name (versions 1.4 and earlier sent them to the weather service <a href="https://open-meteo.com/" target="_blank" rel="noopener">Open-Meteo</a> instead). Location is not sent to or stored on the developer’s servers, is not linked to your identity, and is not used for tracking. You can revoke the permission anytime in iOS Settings.</li>
     <li><strong>Photos</strong>: The App accesses your photo library (PhotoKit) to display a slideshow. Photos are processed and shown on-device only and are never transmitted or uploaded.</li>
     <li><strong>App settings</strong>: Preferences such as clock style are stored only on your device (<code>UserDefaults</code>).</li>
     <li><strong>Inquiries</strong>: Only when you send an inquiry from Settings, the message you enter, an optional reply email address, the app version, the iPadOS version, and the device model are sent through a relay operated by the developer (Cloudflare Workers) to the developer’s Slack workspace. Everything that will be sent is shown on screen before sending. The relay does not store or log the content. Your IP address is used temporarily by Cloudflare only to limit bursts of submissions.</li>
@@ -99,8 +99,8 @@
 
   <h2>Third Parties</h2>
   <ul>
-    <li><strong>Open-Meteo</strong>: Receives only latitude/longitude to return weather data.</li>
-    <li><strong>Apple</strong>: In-app purchase (Weather widget) payments are handled by the App Store. The developer does not receive your payment details.</li>
+    <li><strong>Apple</strong>: WeatherKit and MapKit receive only latitude/longitude to return weather data and the place name (<a href="https://www.apple.com/legal/privacy/" target="_blank" rel="noopener">Apple Privacy Policy</a>). In versions 1.4 and earlier, in-app purchase (Weather widget) payments were handled by the App Store; the developer does not receive your payment details.</li>
+    <li><strong>Open-Meteo</strong>: In versions 1.4 and earlier only, receives latitude/longitude to return weather data.</li>
     <li><strong>Google (Firebase Crashlytics)</strong>: Collects and stores crash reports (<a href="https://firebase.google.com/support/privacy" target="_blank" rel="noopener">Privacy and Security in Firebase</a>).</li>
     <li><strong>Cloudflare</strong>: Runs the relay for inquiries.</li>
     <li><strong>Slack</strong>: Receives and stores inquiries.</li>
